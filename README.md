@@ -49,19 +49,5 @@ At $n=500$, $m=20$ (30-problem Andrei benchmark, Table 2):
 
 M5-LBFGS converges on the largest number of problems and uses substantially fewer outer iterations on the common successful set, at the cost of additional gradient evaluations per accepted step (three per trial versus one for BFGS/L-BFGS). See the paper for the complete discussion, including the spectral-conditioning sensitivity study (Table 4), where this iteration-level advantage narrows as the condition number of the problem grows.
 
-## Citation
 
-If you use this code, please cite the paper:
 
-```bibtex
-@article{m5lbfgs2026,
-  title   = {A Limited-Memory M5 Quasi-Newton Method with Armijo Damping Globalization},
-  author  = {TODO: author list},
-  journal = {TODO: journal, volume, pages, year},
-  year    = {TODO}
-}
-```
-
-## License
-
-TODO (authors): choose and add a license (e.g. MIT) before making this repository public. Until a `LICENSE` file is added, all rights are reserved by the authors.
