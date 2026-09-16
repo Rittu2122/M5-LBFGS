@@ -31,9 +31,8 @@ Both notebooks run top-to-bottom with no configuration required, in any standard
 
 The first code cell of each notebook prints an environment fingerprint (Python version, PyTorch version, platform, CPU model, thread count). This is not required for the code to run — it is printed purely so the exact software/hardware environment behind a given set of results is always on record.
 
-## Reproducibility
+**Reproducibility note:** the exact numbers reported in the accompanying paper were produced in VS Code on Windows 10 (Python 3.14.2, PyTorch 2.13.0, Intel Core i3-6006U, 4 GB RAM). We verified that outer-iteration counts, gradient-evaluation counts, and convergence status reproduce *exactly* on Google Colab (CPU runtime) as well; CPU wall-clock time is expected to vary by environment and should not be compared directly across machines.
 
-BFGS, L-BFGS, and M5-LBFGS are all deterministic algorithms operating on fixed, closed-form test problems — there is no randomness anywhere in either notebook. As a result, the outer-iteration counts, gradient-evaluation counts, final objective values, final gradient norms, and convergence status reported by these notebooks are exactly reproducible on any machine with a matching Python/PyTorch environment.
 
 **CPU time is the one exception.** Wall-clock time reflects operating-system scheduling and instantaneous machine load in addition to the algorithm itself, so it is not expected to match exactly even on identical hardware. To reduce (not eliminate) this noise, CPU time for every run that converges is averaged over 10 repetitions; a run that exhausts its iteration budget without converging is timed once, since its cost is already fixed by a deterministic iteration count rather than by run-to-run variation.
 
