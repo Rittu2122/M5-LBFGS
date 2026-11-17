@@ -94,7 +94,7 @@ CPU time is measured using process time. For a problem–method pair whose initi
 
 The notebook is designed for **Google Colab with a CPU runtime**; no GPU is required.
 
-1. Upload or open `M5LBFGS_CUTEst_final(4).ipynb` in [Google Colab](https://colab.research.google.com/).
+1. Upload or open `M5LBFGS_CUTEst_final.ipynb` in [Google Colab](https://colab.research.google.com/).
 2. Select a CPU runtime and run the notebook from top to bottom using **Runtime → Run all**.
 3. Part 1 installs the required CUTEst/PyCUTEst build tools and libraries. It installs `gfortran`, `meson`, `ninja`, `pycutest`, and `jinja2`, and clones/builds the SIFDecode, CUTEst, and SIF repositories when needed.
 4. Part 2 mounts Google Drive by default and creates the result directory:
